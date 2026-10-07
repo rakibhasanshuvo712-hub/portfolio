@@ -794,7 +794,24 @@
 
       </div>
 
-    </section>
+   <section class="section get-touch">
+  <div class="gt-wrap">
+    <div class="gt-head">
+      <h2>Get in <span>Touch!</span></h2>
+      <p>Open to internships, freelance work and collaborations.</p>
+    </div>
+
+    <div class="gt-card">
+      <h3>Send me a message</h3>
+      <input id="cn" type="text" placeholder="Name">
+      <input id="ce" type="email" placeholder="Email">
+      <input id="cs" type="text" placeholder="Subject">
+      <textarea id="cm" rows="5" placeholder="Message"></textarea>
+      <button onclick="sendMsg()">Submit</button>
+      <p id="cf" class="gt-feedback"></p>
+    </div>
+  </div>
+</section>
 
   </main>
 
@@ -823,4 +840,7 @@
   <script src="script.js"></script>
 
 </body>
+<canvas id="bg"></canvas>
+<div class="cursor-glow"></div>
+<div class="progress"></div>
 </html>
