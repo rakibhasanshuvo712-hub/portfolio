@@ -223,3 +223,61 @@ html body .section, html body .cv-section, html body .cta, html body footer { ba
 /* profile photo float */
 .hero-photo { animation: float 5s ease-in-out infinite; box-shadow: 0 0 60px rgba(0,212,255,.35); }
 @keyframes float { 50% { transform: translateY(-14px); } }
+
+
+
+
+/* ==========================================
+   FIXED CV / RESUME SECTION STYLING
+   ========================================== */
+.cv-section {
+  padding: 60px 0;
+}
+
+.cv-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  padding: 40px 50px;
+  backdrop-filter: blur(14px);
+  box-shadow: var(--card-shadow);
+}
+
+.cv-box .section-label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--accent-1);
+}
+
+.cv-box h2 {
+  font: 700 30px / 1.2 Poppins;
+  margin: 0 0 12px;
+  color: var(--text); /* Ensures proper contrast in both dark and light modes */
+}
+
+.cv-box p {
+  color: var(--text); /* Brighter text color for high visibility */
+  opacity: 0.85;
+  font-size: 15px;
+  margin: 0;
+  max-width: 550px;
+}
+
+.cv-box .btn.primary {
+  white-space: nowrap; /* Prevents text from wrapping awkwardly inside the button */
+  padding: 14px 28px;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 850px) {
+  .cv-box {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 30px;
+    gap: 24px;
+  }
+}
