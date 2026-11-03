@@ -2,6 +2,33 @@
    RAKIB HASAN SHUVO - PORTFOLIO INTERACTION & BACKGROUND
    ======================================================== */
 
+// ---- Persisted color theme ----
+(function initTheme() {
+  const toggle = document.getElementById('themeToggle');
+  const root = document.documentElement;
+  if (!toggle) return;
+
+  let savedTheme = null;
+  try { savedTheme = localStorage.getItem('portfolio-theme'); } catch (_) {}
+  const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+
+  function applyTheme(theme) {
+    const isLight = theme === 'light';
+    root.dataset.theme = isLight ? 'light' : 'dark';
+    toggle.setAttribute('aria-pressed', String(isLight));
+    toggle.setAttribute('aria-label', `Switch to ${isLight ? 'dark' : 'light'} mode`);
+    toggle.querySelector('.theme-toggle-icon').textContent = isLight ? '☾' : '☀';
+    toggle.querySelector('.theme-toggle-label').textContent = isLight ? 'Dark mode' : 'Light mode';
+  }
+
+  applyTheme(savedTheme || (prefersLight ? 'light' : 'dark'));
+  toggle.addEventListener('click', () => {
+    const nextTheme = root.dataset.theme === 'light' ? 'dark' : 'light';
+    applyTheme(nextTheme);
+    try { localStorage.setItem('portfolio-theme', nextTheme); } catch (_) {}
+  });
+})();
+
 // ---- Mobile Menu & Navigation ----
 const menuBtn = document.getElementById('menuBtn');
 const navLinks = document.getElementById('navLinks');
