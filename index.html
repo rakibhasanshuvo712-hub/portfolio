@@ -24,6 +24,21 @@
 
 <body>
 
+  <!-- ================= DYNAMIC BACKGROUND SYSTEM ================= -->
+  <div class="bg-wrapper" aria-hidden="true">
+    <div class="bg-gradient-base"></div>
+    <div class="aurora-blobs">
+      <div class="aurora-blob blob-1"></div>
+      <div class="aurora-blob blob-2"></div>
+      <div class="aurora-blob blob-3"></div>
+      <div class="aurora-blob blob-4"></div>
+    </div>
+    <div class="bg-grid-overlay"></div>
+    <canvas id="bg"></canvas>
+    <div class="cursor-glow" id="cursorGlow"></div>
+  </div>
+  <div class="progress" id="scrollProgress"></div>
+
   <!-- ================= NAVBAR ================= -->
 
   <header class="nav-wrap">
@@ -296,142 +311,163 @@
         </div>
 
 
-        <div class="projects-grid">
+                <div class="projects-grid">
 
-          <!-- Project 01 (newest) -->
-
+          <!-- Project 01 (Pinned: BookNook) -->
           <article class="project-card featured">
-
             <div class="project-top">
-              <span class="tag">Next.js · TypeScript</span>
+              <span class="tag">Next.js · Better Auth · MongoDB</span>
               <span class="number">01</span>
             </div>
-
-            <h3>Bazar Dor (বাজার দর)</h3>
-
+            <h3>BookNook</h3>
             <p>
-              A responsive Bengali-language web app that tracks
-              daily market prices of essentials in Bangladesh —
-              rice, lentils, oil, vegetables, fish, meat, eggs and
-              spices. Shows day-over-day price changes, category
-              browsing, per-market price comparison, and user
-              sign-in with a profile page.
+              A full-stack community library web application built with Next.js App Router, React, TypeScript, and Tailwind CSS. Features book catalog discovery with availability tracking, personalized collection management, persistent authentication via Better Auth, and borrow/return workflows connected to an Express &amp; MongoDB API.
             </p>
-
             <div class="chips">
-              <span>Next.js,</span>
-              <span>TypeScript,</span>
-              <span>Tailwind,</span>
-              <span>Authentication,</span>
-              <span>Vercel</span>
-            </div>
-
-            <a href="https://bazar-dor-three.vercel.app/" target="_blank" rel="noreferrer">
-              Live Demo ↗
-            </a>
-
-            <a href="https://github.com/rakibhasanshuvo712-hub/Bazar-Dor" target="_blank" rel="noreferrer">
-              Source Code ↗
-            </a>
-
-          </article>
-
-
-          <!-- Project 02 -->
-
-          <article class="project-card">
-
-            <div class="project-top">
-              <span class="tag">Next.js · TypeScript</span>
-              <span class="number">02</span>
-            </div>
-
-            <h3>Fit Log</h3>
-
-            <p>
-              A modern responsive fitness workout application
-              where users can explore workouts, view details,
-              create a personal plan, save workouts and track
-              completed exercises.
-            </p>
-
-            <div class="chips">
-              <span>Next.js,</span>
-              <span>React,</span>
-              <span>TypeScript,</span>
-              <span>Tailwind</span>
-              <span>Vercel</span>
-            </div>
-
-            <a href="https://fit-log-sandy.vercel.app/" target="_blank" rel="noreferrer">
-              Live Demo ↗
-            </a>
-
-            <a href="https://github.com/rakibhasanshuvo712-hub/fit-log" target="_blank" rel="noreferrer">
-              Source Code ↗
-            </a>
-
-          </article>
-
-
-          <!-- Project 03 -->
-
-          <article class="project-card">
-
-            <div class="project-top">
-              <span class="tag">React · TypeScript</span>
-              <span class="number">03</span>
-            </div>
-
-            <h3>Technology Stack Builder</h3>
-
-            <p>
-              An interactive React application for exploring
-              technologies and creating a personal technology
-              stack with add, remove and manage actions.
-            </p>
-
-            <div class="chips">
+              <span>Next.js</span>
               <span>React</span>
               <span>TypeScript</span>
-              <span>Tailwind</span>
-              <span>Toastify</span>
+              <span>Tailwind CSS</span>
+              <span>Better Auth</span>
+              <span>MongoDB</span>
+              <span>Vercel</span>
             </div>
-
-            <a href="https://github.com/rakibhasanshuvo712-hub/Assignment-5" target="_blank" rel="noreferrer">
-              View Project ↗
-            </a>
-
+            <div class="project-links">
+              <a href="https://borrowbook-client.vercel.app" target="_blank" rel="noreferrer">
+                Live Demo ↗
+              </a>
+              <a href="https://github.com/rakibhasanshuvo712-hub/borrowbook-client" target="_blank" rel="noreferrer">
+                Source Code ↗
+              </a>
+            </div>
           </article>
 
-
-          <!-- Project 04 -->
-
-          <article class="project-card">
-
+          <!-- Project 02 (Pinned: Wanderlust) -->
+          <article class="project-card featured">
             <div class="project-top">
-              <span class="tag">HTML · CSS</span>
+              <span class="tag">Next.js 16 · shadcn/ui · MongoDB</span>
+              <span class="number">02</span>
+            </div>
+            <h3>Wanderlust</h3>
+            <p>
+              A modern travel and vacation destination exploration platform. Features dynamic destination browsing, interactive booking reservation flows, custom destination publishing, responsive carousels, and secure authentication powered by Better Auth and MongoDB.
+            </p>
+            <div class="chips">
+              <span>Next.js 16</span>
+              <span>React 19</span>
+              <span>TypeScript</span>
+              <span>Tailwind CSS v4</span>
+              <span>shadcn/ui</span>
+              <span>Better Auth</span>
+              <span>MongoDB</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/rakibhasanshuvo712-hub/wanderlast-frontend" target="_blank" rel="noreferrer">
+                Source Code ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 03 (Pinned: Bazar Dor) -->
+          <article class="project-card">
+            <div class="project-top">
+              <span class="tag">Next.js · TypeScript · Real-Time</span>
+              <span class="number">03</span>
+            </div>
+            <h3>Bazar Dor (বাজার দর)</h3>
+            <p>
+              A responsive Bengali-language web application tracking daily market prices of essentials in Bangladesh — rice, lentils, oil, vegetables, fish, meat, eggs, and spices. Features day-over-day price trends, per-market price comparisons, category filtering, and user authentication.
+            </p>
+            <div class="chips">
+              <span>Next.js</span>
+              <span>TypeScript</span>
+              <span>Tailwind CSS</span>
+              <span>Better Auth</span>
+              <span>MongoDB</span>
+              <span>Vercel</span>
+            </div>
+            <div class="project-links">
+              <a href="https://bazar-dor-three.vercel.app/" target="_blank" rel="noreferrer">
+                Live Demo ↗
+              </a>
+              <a href="https://github.com/rakibhasanshuvo712-hub/Bazar-Dor" target="_blank" rel="noreferrer">
+                Source Code ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 04 (Pinned: Fit Log) -->
+          <article class="project-card">
+            <div class="project-top">
+              <span class="tag">Next.js · TypeScript · Fitness App</span>
               <span class="number">04</span>
             </div>
-
-            <h3>PH-A1</h3>
-
+            <h3>Fit Log</h3>
             <p>
-              A responsive web development project focused
-              on creating a clean and user-friendly interface
-              using HTML and CSS.
+              A modern responsive fitness workout application where users can explore comprehensive workout libraries, view detailed exercise guides, create personalized workout plans, save routines, and track completed workouts with dynamic statistics.
             </p>
-
             <div class="chips">
-              <span>HTML</span>
-              <span>CSS</span>
+              <span>Next.js</span>
+              <span>React</span>
+              <span>TypeScript</span>
+              <span>Tailwind CSS</span>
+              <span>React Toastify</span>
+              <span>Vercel</span>
+            </div>
+            <div class="project-links">
+              <a href="https://fit-log-sandy.vercel.app/" target="_blank" rel="noreferrer">
+                Live Demo ↗
+              </a>
+              <a href="https://github.com/rakibhasanshuvo712-hub/fit-log" target="_blank" rel="noreferrer">
+                Source Code ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 05 (Pinned: Technology Stack Builder) -->
+          <article class="project-card">
+            <div class="project-top">
+              <span class="tag">React 19 · TypeScript · Vite</span>
+              <span class="number">05</span>
+            </div>
+            <h3>Technology Stack Builder</h3>
+            <p>
+              An interactive React application for exploring modern web technologies, comparing frameworks and tools, and assembling a personalized technology stack with real-time add, remove, and filter actions.
+            </p>
+            <div class="chips">
+              <span>React 19</span>
+              <span>TypeScript</span>
+              <span>Tailwind CSS</span>
+              <span>Vite</span>
+              <span>Toastify</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/rakibhasanshuvo712-hub/Assignment-5" target="_blank" rel="noreferrer">
+                Source Code ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 06 -->
+          <article class="project-card">
+            <div class="project-top">
+              <span class="tag">HTML5 · CSS3 · Responsive</span>
+              <span class="number">06</span>
+            </div>
+            <h3>PH-A1</h3>
+            <p>
+              A clean, accessible web development showcase focused on modern semantic markup, responsive layouts, and polished user interface styling using pure HTML5 and CSS3.
+            </p>
+            <div class="chips">
+              <span>HTML5</span>
+              <span>CSS3</span>
               <span>Responsive UI</span>
             </div>
-
-            <a href="https://github.com/rakibhasanshuvo712-hub/ph-a1" target="_blank" rel="noreferrer">
-              View Project ↗
-            </a>
-
+            <div class="project-links">
+              <a href="https://github.com/rakibhasanshuvo712-hub/ph-a1" target="_blank" rel="noreferrer">
+                Source Code ↗
+              </a>
+            </div>
           </article>
 
         </div>
@@ -541,7 +577,4 @@
   <script src="script.js"></script>
 
 </body>
-<canvas id="bg"></canvas>
-<div class="cursor-glow"></div>
-<div class="progress"></div>
 </html>
